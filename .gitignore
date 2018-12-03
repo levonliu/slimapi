@@ -1,0 +1,5 @@
+/vendor
+/.idea
+
+将删除 .gitignore
+将删除 logs/
