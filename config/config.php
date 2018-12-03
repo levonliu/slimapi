@@ -12,10 +12,10 @@ return [
     //数据库配置
     'database' => [
         'driver'    => 'mysql',
-        'host'      => '192.168.128.144',
-        'database'  => 'saas',
+        'host'      => '127.0.0.1',
+        'database'  => 'wugu',
         'username'  => 'root',
-        'password'  => '12345abc',
+        'password'  => 'root',
         'charset'   => 'utf8',
         'collation' => 'utf8_unicode_ci',
         'prefix'    => 's_',
