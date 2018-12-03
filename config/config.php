@@ -28,6 +28,13 @@ return [
         'Headers' => 'Origin,X-Requested-With,Content-Type,Accept,Authorization'
     ],
 
+    // 日志配置
+    'logger' => [
+        'name' => 'slim-app',
+        'path' => __DIR__ . '/../logs/app.log',
+        'level' => \Monolog\Logger::DEBUG,
+    ],
+
     // 身份认证
     'jwt' => [
         'key'   => 'QWERTYUJHGFSDSDFJRERTY',
