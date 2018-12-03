@@ -8,7 +8,7 @@
 
 $container = $app->getContainer();
 
-// 数据模型需要立即执行一次
+// init database
 $container['database'] = function($c) {
     $capsule  = new Illuminate\Database\Capsule\Manager();
     $database = $c->get('settings')['database'];
@@ -17,4 +17,13 @@ $container['database'] = function($c) {
     $capsule->bootEloquent();
 
     return $capsule;
+};
+
+// init monolog
+$container['logger'] = function ($c) {
+    $settings = $c->get('settings')['logger'];
+    $logger = new Monolog\Logger($settings['name']);
+    $logger->pushProcessor(new Monolog\Processor\UidProcessor());
+    $logger->pushHandler(new Monolog\Handler\StreamHandler($settings['path'], $settings['level']));
+    return $logger;
 };
