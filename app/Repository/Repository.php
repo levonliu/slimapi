@@ -15,13 +15,14 @@ abstract class Repository
     {
 
     }
+
     /**
-     * 不允许使用new的方式新建对象
+     *  不允许使用new的方式新建对象
      * 因为仓储只是存粹的数据操作
-     * @DateTime 2018-11-22
-     * @param    [type]     $name [description]
-     * @param    [type]     $arg  [description]
-     * @return   [type]           [description]
+     * @param $name
+     * @param $arg
+     *
+     * @throws Exception
      */
     public function __call($name, $arg)
     {
@@ -29,7 +30,6 @@ abstract class Repository
     }
     /**
      * 静态调用方法
-     * @DateTime 2018-11-22
      * @param    [type]     $name [description]
      * @param    [type]     $arg  [description]
      * @return   [type]           [description]
