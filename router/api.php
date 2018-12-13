@@ -9,3 +9,10 @@
 $app->get('/',function(){
     echo '123';
 });
+
+$app->get('/test',function(){
+   echo 'this is a test';
+});
+
+//login
+$app->post('/login','App\Controller\LoginController:login');

@@ -10,8 +10,7 @@ require __DIR__.'/../vendor/autoload.php';
 
 //init config
 $settings   = ['settings' => []];
-$conf_files = glob(__DIR__.'/conf/*.php');
-array_push($conf_files, __DIR__.'/../config/config.php');
+$conf_files = glob(__DIR__.'/../config/*.php');
 foreach($conf_files as $file) {
     $settings['settings'] = array_merge($settings['settings'], require $file);
 }
@@ -34,6 +33,9 @@ foreach(glob(__DIR__.'/../router/*.php') as $route) {
 }
 
 // entry && init Eloquent ORM
-$app->getContainer()->get('database');
+$database = $app->getContainer()->get('database');
+
+//start QueryLog
+$database::enableQueryLog();
 
 return $app;

@@ -27,3 +27,8 @@ $container['logger'] = function ($c) {
     $logger->pushHandler(new Monolog\Handler\StreamHandler($settings['path'], $settings['level']));
     return $logger;
 };
+
+// 数据管理
+$container['store'] = function($c){
+    return App\Library\Store::getinstance();
+};
