@@ -6,7 +6,7 @@
  * Time: 上午10:59
  */
 
-namespace App\library;
+namespace App\Library;
 
 
 class Auth

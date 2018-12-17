@@ -18,13 +18,12 @@ class JwtMiddleware
         try{
             $JWTConfig = config('jwt');
             $token = $request->getServerParam('HTTP_AUTHORIZATION');
-            if ($token) {
-                // 身份检测
-                $payload = JWT::decode($token, $JWTConfig['key'], array($JWTConfig['hash']));
-                app('store')->set('user', $payload);
-            }else{
+            if (!$token) {
                 throw new Exception("身份丢失！",401);
             }
+            // 身份检测
+            $payload = JWT::decode($token, $JWTConfig['key'], array($JWTConfig['hash']));
+            app('store')->set('user', $payload);
             return $next($request, $response);
         }catch(Exception $e){
             $message = '';

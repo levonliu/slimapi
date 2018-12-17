@@ -6,7 +6,7 @@
  * Time: 下午1:39
  */
 
-namespace App\library;
+namespace App\Library;
 
 
 class Store
@@ -15,7 +15,7 @@ class Store
     public static $instance;
 
     // 数据存储器
-    private $stroe = [];
+    private $store = [];
 
     // 防止构造本身
     private function __construct(){
@@ -30,17 +30,17 @@ class Store
 
     // 存储数据
     public function set($key, $value){
-        $this->stroe[$key] = $value;
+        $this->store[$key] = $value;
     }
 
     // 获取数据
     public function get($key){
-        return $this->has($key) ? $this->stroe[$key]: null;
+        return $this->has($key) ? $this->store[$key]: null;
     }
 
     // 检查是否有该数据
     public function has($key)
     {
-        return isset($this->stroe[$key]) ? true: false;
+        return isset($this->store[$key]) ? true: false;
     }
 }
