@@ -9,6 +9,8 @@
 return [
     'app_debug' => 'true',
 
+    'displayErrorDetails' => true, // 是否显示错误详情
+
     // 接口基础地址
     'base_url'  => 'http://api.saas.com',
 

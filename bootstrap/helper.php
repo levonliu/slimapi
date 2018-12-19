@@ -136,7 +136,7 @@ if (! function_exists('error')) {
         ];
         // 开发模式下才显示错误详情
         $config = config();
-        if ( $config['model'] === 'production') {
+        if ( !$config['app_debug']) {
             unset($data['error']);
         }
         return response($data, 400);

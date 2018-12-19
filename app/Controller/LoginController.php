@@ -17,7 +17,7 @@ class LoginController extends Controller
     {
         try{
             $param  = $req->getParams();
-            $user = UserRepository::getUserInfo($param['username'],$param['password']);
+            $user = UserRepository::findByUserPass($param['username'],$param['password']);
             if($user){
                 // 当前请求来源
                 $origin = $req->getServerParam('HTTP_ORIGIN') ? $req->getServerParam('HTTP_ORIGIN') :'';

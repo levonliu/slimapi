@@ -12,8 +12,17 @@ use App\Repository\MenuRepository;
 
 class MenuController extends Controller
 {
+    /**
+     * @param $req
+     * @param $res
+     * @param $arg
+     *
+     * @return mixed
+     */
     public function getMenu($req, $res, $arg)
     {
-        $menu = MenuRepository::getList();
+        $menus = MenuRepository::getList();
+
+        return success(['data'=>$menus]);
     }
 }

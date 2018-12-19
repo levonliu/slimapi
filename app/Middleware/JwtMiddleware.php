@@ -26,7 +26,6 @@ class JwtMiddleware
             app('store')->set('user', $payload);
             return $next($request, $response);
         }catch(Exception $e){
-            $message = '';
             if((int)$e->getCode() === 401){
                 $message = $e->getMessage();
             }else{

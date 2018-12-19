@@ -1,0 +1,14 @@
+[2018-12-19 11:46:55] slim-app.ERROR: SQLSTATE[HY000] [1049] Unknown database 'wugu' (SQL: select `id`, `name` from `wg_users` where (`name` = admin and `password` = admin) limit 1) [] {"uid":"004cd90"}
+[2018-12-19 11:49:47] slim-app.ERROR: SQLSTATE[HY000] [1049] Unknown database 'wugu' (SQL: select `id`, `name` from `wg_users` where (`name` = admin and `password` = 123) limit 1) [] {"uid":"aa380cc"}
+[2018-12-19 11:50:13] slim-app.ERROR: 身份验证错误:Wrong number of segments [] {"uid":"982a215"}
+[2018-12-19 11:50:34] slim-app.ERROR: SQLSTATE[HY000] [1049] Unknown database 'wugu' (SQL: select `id`, `name` from `wg_users` where (`name` = admin and `password` = 123) limit 1) [] {"uid":"ddc248a"}
+[2018-12-19 14:28:09] slim-app.ERROR: 身份验证错误:Wrong number of segments [] {"uid":"b5d89cf"}
+[2018-12-19 14:31:00] slim-app.ERROR: 身份验证错误:Wrong number of segments [] {"uid":"7bbd331"}
+[2018-12-19 14:31:30] slim-app.ERROR: 身份验证错误:Wrong number of segments [] {"uid":"d0cdaff"}
+[2018-12-19 14:32:37] slim-app.ERROR: 身份验证错误:Wrong number of segments [] {"uid":"e887b25"}
+[2018-12-19 14:33:07] slim-app.ERROR: 身份验证错误:Wrong number of segments [] {"uid":"e984a62"}
+[2018-12-19 14:33:13] slim-app.ERROR: 身份验证错误:Wrong number of segments [] {"uid":"c75dbe4"}
+[2018-12-19 14:33:25] slim-app.ERROR: 身份验证错误:Wrong number of segments [] {"uid":"47d8dbb"}
+[2018-12-19 16:27:50] slim-app.ERROR: 身份验证错误:Callable App\Controller\UserController does not exist [] {"uid":"4a18263"}
+[2018-12-19 16:59:37] slim-app.ERROR: 身份验证错误:Wrong number of segments [] {"uid":"93e5570"}
+[2018-12-19 17:00:19] slim-app.ERROR: 身份验证错误:Wrong number of segments [] {"uid":"7673353"}
