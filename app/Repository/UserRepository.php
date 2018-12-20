@@ -31,7 +31,7 @@ class UserRepository extends Repository
         return $user;
     }
 
-    public function getUser()
+    protected function getUser()
     {
         $user = [];
 

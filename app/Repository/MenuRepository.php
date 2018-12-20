@@ -20,7 +20,7 @@ class MenuRepository extends Repository
      * 2. 在当前组获取所属规则
      * 3. 获取规则下的菜单
      */
-    public function getList()
+    protected function getList()
     {
         //获取组
         $uid = app('store')->get('user')->id;
