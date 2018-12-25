@@ -27,3 +27,35 @@
 [2018-12-20 17:41:27] slim-app.ERROR: SQLSTATE[42S22]: Column not found: 1054 Unknown column '姓名' in 'where clause' (SQL: select count(*) as aggregate from `wg_customer` where `deleted` = 0 and (`ID` like %l% or `姓名` like %l% or `性别` like %l% or `电话` like %l% or `住址` like %l% or `组` like %l%)) [] {"uid":"5b3808b"}
 [2018-12-20 17:41:28] slim-app.ERROR: SQLSTATE[42S22]: Column not found: 1054 Unknown column '姓名' in 'where clause' (SQL: select count(*) as aggregate from `wg_customer` where `deleted` = 0 and (`ID` like %li% or `姓名` like %li% or `性别` like %li% or `电话` like %li% or `住址` like %li% or `组` like %li%)) [] {"uid":"5ebfb5b"}
 [2018-12-20 17:41:28] slim-app.ERROR: SQLSTATE[42S22]: Column not found: 1054 Unknown column '姓名' in 'where clause' (SQL: select count(*) as aggregate from `wg_customer` where `deleted` = 0 and (`ID` like %liu% or `姓名` like %liu% or `性别` like %liu% or `电话` like %liu% or `住址` like %liu% or `组` like %liu%)) [] {"uid":"038c813"}
+[2018-12-21 11:45:42] slim-app.ERROR: 身份验证错误:Expired token [] {"uid":"6d87398"}
+[2018-12-21 11:45:42] slim-app.ERROR: 身份验证错误:Expired token [] {"uid":"a1022f2"}
+[2018-12-25 10:35:45] slim-app.ERROR: 身份验证错误:Expired token [] {"uid":"7cd5f67"}
+[2018-12-25 10:35:45] slim-app.ERROR: 身份验证错误:Expired token [] {"uid":"9f921d6"}
+[2018-12-25 10:36:23] slim-app.ERROR: 身份验证错误:Expired token [] {"uid":"4e78da3"}
+[2018-12-25 10:36:23] slim-app.ERROR: 身份验证错误:Expired token [] {"uid":"4828877"}
+[2018-12-25 10:43:55] slim-app.ERROR: 身份验证错误:Expired token [] {"uid":"2330d03"}
+[2018-12-25 10:43:55] slim-app.ERROR: 身份验证错误:Expired token [] {"uid":"5e4deb4"}
+[2018-12-25 11:20:16] slim-app.ERROR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'sex_name' in 'where clause' (SQL: select count(*) as aggregate from `wg_customer` where `deleted` = 0 and (`id` like %w% or `name` like %w% or `sex_name` like %w% or `tel` like %w% or `address` like %w% or `level_name` like %w%)) [] {"uid":"e73d0d5"}
+[2018-12-25 13:46:48] slim-app.ERROR: 身份验证错误:Expired token [] {"uid":"0effd08"}
+[2018-12-25 13:58:11] slim-app.ERROR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'level_name' in 'order clause' (SQL: select * from `wg_customer` where `deleted` = 0 order by `level_name` asc limit 10 offset 0) [] {"uid":"973a668"}
+[2018-12-25 14:09:30] slim-app.ERROR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'level_name' in 'order clause' (SQL: select * from `wg_customer` where `deleted` = 0 order by `level_name` asc limit 10 offset 0) [] {"uid":"5ee34d0"}
+[2018-12-25 14:10:37] slim-app.ERROR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'level_name' in 'order clause' (SQL: select * from `wg_customer` where `deleted` = 0 order by `level_name` asc limit 10 offset 0) [] {"uid":"65d93b5"}
+[2018-12-25 14:13:54] slim-app.ERROR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'sex_name' in 'order clause' (SQL: select * from `wg_customer` where `deleted` = 0 order by `sex_name` asc limit 10 offset 0) [] {"uid":"eefa7fb"}
+[2018-12-25 14:13:55] slim-app.ERROR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'sex_name' in 'order clause' (SQL: select * from `wg_customer` where `deleted` = 0 order by `sex_name` desc limit 10 offset 0) [] {"uid":"b50d93f"}
+[2018-12-25 14:15:36] slim-app.ERROR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'sex_name' in 'order clause' (SQL: select * from `wg_customer` where `deleted` = 0 order by `sex_name` asc limit 10 offset 0) [] {"uid":"6e94d59"}
+[2018-12-25 14:15:38] slim-app.ERROR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'sex_name' in 'order clause' (SQL: select * from `wg_customer` where `deleted` = 0 order by `sex_name` desc limit 10 offset 0) [] {"uid":"9ebda15"}
+[2018-12-25 14:16:43] slim-app.ERROR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'level_name' in 'order clause' (SQL: select * from `wg_customer` where `deleted` = 0 order by `level_name` asc limit 10 offset 0) [] {"uid":"3621292"}
+[2018-12-25 15:06:30] slim-app.ERROR: SQLSTATE[42S22]: Column not found: 1054 Unknown column '' in 'order clause' (SQL: select * from `wg_customer` where `deleted` = 0 order by `` desc limit 10 offset 0) [] {"uid":"c1ee6a4"}
+[2018-12-25 15:07:23] slim-app.ERROR: SQLSTATE[42S22]: Column not found: 1054 Unknown column '' in 'order clause' (SQL: select * from `wg_customer` where `deleted` = 0 order by `` desc limit 10 offset 0) [] {"uid":"3045a03"}
+[2018-12-25 15:09:43] slim-app.ERROR: SQLSTATE[42S22]: Column not found: 1054 Unknown column '' in 'order clause' (SQL: select * from `wg_customer` where `deleted` = 0 order by `` desc limit 10 offset 0) [] {"uid":"e18390d"}
+[2018-12-25 15:09:49] slim-app.ERROR: SQLSTATE[42S22]: Column not found: 1054 Unknown column '' in 'order clause' (SQL: select * from `wg_customer` where `deleted` = 0 order by `` desc limit 10 offset 0) [] {"uid":"9548af0"}
+[2018-12-25 15:10:07] slim-app.ERROR: SQLSTATE[42S22]: Column not found: 1054 Unknown column '' in 'order clause' (SQL: select * from `wg_customer` where `deleted` = 0 order by `` desc limit 10 offset 0) [] {"uid":"cc29990"}
+[2018-12-25 15:10:11] slim-app.ERROR: SQLSTATE[42S22]: Column not found: 1054 Unknown column '' in 'order clause' (SQL: select * from `wg_customer` where `deleted` = 0 order by `` desc limit 10 offset 0) [] {"uid":"57fec20"}
+[2018-12-25 15:11:39] slim-app.ERROR: SQLSTATE[42S22]: Column not found: 1054 Unknown column '' in 'order clause' (SQL: select * from `wg_customer` where `deleted` = 0 order by `` desc limit 10 offset 0) [] {"uid":"ed594e6"}
+[2018-12-25 15:11:55] slim-app.ERROR: SQLSTATE[42S22]: Column not found: 1054 Unknown column '' in 'order clause' (SQL: select * from `wg_customer` where `deleted` = 0 order by `` desc limit 10 offset 0) [] {"uid":"df812f4"}
+[2018-12-25 15:12:03] slim-app.ERROR: SQLSTATE[42S22]: Column not found: 1054 Unknown column '' in 'order clause' (SQL: select * from `wg_customer` where `deleted` = 0 order by `` desc limit 10 offset 0) [] {"uid":"79bfe4f"}
+[2018-12-25 15:13:14] slim-app.ERROR: SQLSTATE[42S22]: Column not found: 1054 Unknown column '' in 'order clause' (SQL: select * from `wg_customer` where `deleted` = 0 order by `` desc limit 10 offset 0) [] {"uid":"794c2ee"}
+[2018-12-25 16:32:45] slim-app.ERROR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'undefined' in 'order clause' (SQL: select * from `wg_customer` where `deleted` = 0 order by `undefined` asc limit 10 offset 0) [] {"uid":"63bec76"}
+[2018-12-25 16:32:45] slim-app.ERROR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'undefined' in 'order clause' (SQL: select * from `wg_customer` where `deleted` = 0 order by `undefined` desc limit 10 offset 0) [] {"uid":"f8b7172"}
+[2018-12-25 16:32:46] slim-app.ERROR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'undefined' in 'order clause' (SQL: select * from `wg_customer` where `deleted` = 0 order by `undefined` asc limit 10 offset 0) [] {"uid":"4e1bf4b"}
+[2018-12-25 16:47:45] slim-app.ERROR: 身份验证错误:Expired token [] {"uid":"4cd2fe2"}

@@ -27,6 +27,10 @@ $app->group('/',function(){
 
     //客户
     $this->group('customer',function(){
-        $this->get('','App\Controller\CustomerController:getCustomer');
+        $this->get('','App\Controller\CustomerController:getCustomer');     // 列表
+        $this->get('/{id}',   'Controllers\CustomerController:detail');     // 详情
+        $this->post('',       'Controllers\CustomerController:create');     // 新增
+        $this->patch('/{id}', 'Controllers\CustomerController:update');     // 更新
+        $this->delete('/{id}','Controllers\CustomerController:cancel');     // 删除
     });
 })->add(new App\Middleware\JwtMiddleware());

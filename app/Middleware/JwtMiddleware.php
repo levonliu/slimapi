@@ -26,15 +26,19 @@ class JwtMiddleware
             app('store')->set('user', $payload);
             return $next($request, $response);
         }catch(Exception $e){
-            if((int)$e->getCode() === 401){
-                $message = $e->getMessage();
-            }else{
-                $message = '请停止恶意操作!!!';
-                app('logger')->addError("身份验证错误:".$e->getMessage());
+            switch((int)$e->getCode()){
+                case 401:
+                    $message = $e->getMessage();
+                    break;
+                case 0:
+                    $message = '身份失效，请登录!';
+                    break;
+                default:
+                    $message = '请停止恶意操作!!!';
+                    break;
             }
-            $data = [
-                'message' => $message,
-            ];
+            app('logger')->addError("身份验证错误:".$e->getMessage());
+            $data = [ 'message' => $message];
             return response($data, 401);
         }
     }
