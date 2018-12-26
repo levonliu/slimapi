@@ -58,16 +58,56 @@ abstract class Repository
         return 'App\Model\\'.$model_name;
     }
 
+    protected function beforeOperate($type = '')
+    {
+        $user = app('store')->get('user');
+        $data['updated_person'] = $user->id;
+        switch($type) {
+            case 'create':
+                break;
+            case 'delete':
+                break;
+        }
+
+        return $data;
+    }
+
+    /**
+     * 数据更新
+     * @param $value
+     * @param $id
+     *
+     * @return mixed
+     * @throws Exception
+     */
+    protected function update($value, $id)
+    {
+        $data = $this->beforeOperate();
+        $data  = array_merge($value, $data);
+        $model = $this->getModel();
+        $entry = $model::find($id);
+        if(empty($entry)) {
+            throw new Exception("No data found");
+        }
+        $data = $entry::filter($data); //字段验证
+        $status = $entry->fill($data)->save(); // 保存
+
+        return $status;
+    }
+
+
     /**
      * 格式化查询条件
-     * @param    array      $data 查询条件
+     *
+     * @param    array $data 查询条件
+     *
      * @return   array            数据
      */
     protected function formatQuery($data)
     {
-        $query = [];
-        $query['page']  = $data['page'] ?: 0;
-        $query['limit'] = $data['limit'] ?: 10;
+        $query          = [];
+        $query['page']  = $data['page'] ? : 0;
+        $query['limit'] = $data['limit'] ? : 10;
         $query['order'] = $data['querySort'] ?? [];
 
         /**
@@ -91,47 +131,54 @@ abstract class Repository
 
     /**
      * 获取查询列表
-     * @param    array      $where 查询条件
+     *
+     * @param    array $where 查询条件
+     *
      * @return   array             查询结果
      */
-    protected function lists($where){
+    protected function lists($where)
+    {
         $model = $this->getModel();
-        $model = $model::where('deleted',0);
-        if (isset($where['where'])) {
-            foreach ($where['where'] as $k => $v) {
+        $model = $model::where('deleted', 0);
+        if(isset($where['where'])) {
+            foreach($where['where'] as $k => $v) {
                 $this->makeWhere($model, $v);
             }
             unset($k, $v);
         }
         $count = $model->count();
-//        dd(app('database')::getQueryLog());
+        //        dd(app('database')::getQueryLog());
 
-        if (isset($where['page']) && isset($where['limit'])) {
-            $where['page']  = $where['page']  ?: 1;
-            $where['limit'] = $where['limit'] ?: 10;
-            $offset = ($where['page'] - 1) * $where['limit'];
+        if(isset($where['page']) && isset($where['limit'])) {
+            $where['page']  = $where['page'] ? : 1;
+            $where['limit'] = $where['limit'] ? : 10;
+            $offset         = ($where['page'] - 1) * $where['limit'];
             $model->offset($offset)->limit($where['limit']);
         }
-        if (isset($where['order'])) {
+        if(isset($where['order'])) {
             $model->orderBy($where['order'][0], $where['order'][1]);
         }
         $list = $model->get()->toArray();
 
         $data = [
-            'rows' => $list,
-            'total' => $count
+            'rows'  => $list,
+            'total' => $count,
         ];
+
         return $data;
     }
+
     /**
      * 构造查询条件
      * @DateTime 2018-12-04
+     *
      * @param    [type]     &$model 查询的模型
      * @param    [type]     $v      查询的条件
      */
-    protected function makeWhere(&$model, $v){
+    protected function makeWhere(&$model, $v)
+    {
         $type = strtolower($v[1]);
-        switch ($type) {
+        switch($type) {
             case 'in':
                 $model->whereIn($v[0], $v[2]);
                 break;

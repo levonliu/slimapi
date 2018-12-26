@@ -12,4 +12,6 @@ namespace App\Model;
 class Customer extends Model
 {
     protected $table = 'customer';
+
+    protected $guarded = ['id'];
 }
