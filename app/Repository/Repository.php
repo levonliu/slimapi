@@ -15,6 +15,11 @@ abstract class Repository
 
     }
 
+    public function test()
+    {
+        return [123];
+    }
+
     /**
      *  不允许使用new的方式新建对象
      * 因为仓储只是存粹的数据操作

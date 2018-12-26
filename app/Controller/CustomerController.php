@@ -35,7 +35,6 @@ class CustomerController extends Controller
                 $v['sex_name']   = self::$sex[$v['sex']];
                 $v['level_name'] = self::$level[$v['level']];
             }
-
             return success(['data' => $data]);
         }catch(Exception $e) {
             return error($e);
@@ -66,6 +65,14 @@ class CustomerController extends Controller
         }
     }
 
+    /**
+     * 客户删除 （逻辑删除）
+     * @param $req
+     * @param $res
+     * @param $arg
+     *
+     * @return mixed
+     */
     public function cancel($req, $res, $arg)
     {
         try{
