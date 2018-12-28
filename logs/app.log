@@ -71,3 +71,18 @@
 [2018-12-26 16:58:56] slim-app.ERROR: 身份验证错误:Expired token [] {"uid":"5560530"}
 [2018-12-26 16:58:56] slim-app.ERROR: 身份验证错误:Expired token [] {"uid":"f4db7de"}
 [2018-12-26 16:58:56] slim-app.ERROR: 身份验证错误:Expired token [] {"uid":"a37834e"}
+[2018-12-27 09:40:11] slim-app.ERROR: 身份验证错误:Expired token [] {"uid":"b90a29a"}
+[2018-12-27 09:40:11] slim-app.ERROR: 身份验证错误:Expired token [] {"uid":"a9bb386"}
+[2018-12-27 09:40:11] slim-app.ERROR: 身份验证错误:Expired token [] {"uid":"16b2db1"}
+[2018-12-27 14:00:42] slim-app.ERROR: 身份验证错误:Expired token [] {"uid":"f07149f"}
+[2018-12-27 14:00:42] slim-app.ERROR: 身份验证错误:Expired token [] {"uid":"7119ceb"}
+[2018-12-27 14:00:50] slim-app.ERROR: 身份验证错误:Wrong number of segments [] {"uid":"0e82d5a"}
+[2018-12-27 14:00:50] slim-app.ERROR: 身份验证错误:Wrong number of segments [] {"uid":"fdd9440"}
+[2018-12-27 14:01:17] slim-app.ERROR: 身份验证错误:Wrong number of segments [] {"uid":"4e9e70f"}
+[2018-12-27 14:01:17] slim-app.ERROR: 身份验证错误:Wrong number of segments [] {"uid":"1c9fc27"}
+[2018-12-27 14:01:51] slim-app.ERROR: 身份验证错误:[{},"create"] is not resolvable [] {"uid":"ddc9e5c"}
+[2018-12-27 14:03:38] slim-app.ERROR: 身份验证错误:[{},"create"] is not resolvable [] {"uid":"09e0266"}
+[2018-12-27 18:29:51] slim-app.ERROR: 身份验证错误:Expired token [] {"uid":"00422a6"}
+[2018-12-28 10:41:32] slim-app.ERROR: 身份验证错误:Expired token [] {"uid":"014c3d0"}
+[2018-12-28 10:41:35] slim-app.ERROR: 身份验证错误:Expired token [] {"uid":"f9a45e0"}
+[2018-12-28 10:41:35] slim-app.ERROR: 身份验证错误:Expired token [] {"uid":"83c515d"}

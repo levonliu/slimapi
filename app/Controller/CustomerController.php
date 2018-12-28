@@ -42,6 +42,30 @@ class CustomerController extends Controller
     }
 
     /**
+     * 客户新增
+     * @param $req
+     * @param $res
+     * @param $arg
+     *
+     * @return mixed
+     */
+    public function create($req, $res, $arg)
+    {
+        try{
+            $params = $req->getParams();
+            $params['sex'] = array_search($params['sex_name'],self::$sex);
+            $params['level'] = array_search($params['level_name'],self::$level);
+            $status = CustomerRepository::create($params);
+            if ($status === false) {
+                throw new Exception("新增失败");
+            }
+            return success(['success' => true]);
+        }catch(Exception $e){
+            return error($e);
+        }
+    }
+
+    /**
      * 客户更新
      * @param $req
      * @param $res

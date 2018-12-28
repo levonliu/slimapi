@@ -15,11 +15,6 @@ abstract class Repository
 
     }
 
-    public function test()
-    {
-        return [123];
-    }
-
     /**
      *  不允许使用new的方式新建对象
      * 因为仓储只是存粹的数据操作
@@ -69,12 +64,23 @@ abstract class Repository
         $data['updated_person'] = $user->id;
         switch($type) {
             case 'create':
+                $data['created_person'] = $user->id;
                 break;
             case 'delete':
                 break;
         }
 
         return $data;
+    }
+
+    protected function create($value)
+    {
+        $data = $this->beforeOperate('create');
+        $data  = array_merge($value, $data);
+        $model = $this->getModel();
+        $data = $model::filter($data);
+        $id = $model::create($data);
+        return $id;
     }
 
     /**
